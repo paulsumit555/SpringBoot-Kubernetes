@@ -18,6 +18,14 @@ spec:
         image: rajpalsinghd/test:tagVersion
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: logs
+          mountPath: /home/ubuntu/microservice
+        volumes: 
+        - name: logs 
+          hostPath: 
+            path: /opt/apps/logs 
+            type: DirectoryOrCreate        
 ---
 
 apiVersion: v1
