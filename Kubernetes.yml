@@ -21,11 +21,11 @@ spec:
         volumeMounts:
         - name: logs
           mountPath: /home/ubuntu/microservice
-        volumes: 
-        - name: logs 
-          hostPath: 
-            path: /opt/apps/logs 
-            type: DirectoryOrCreate        
+      volumes: 
+      - name: logs 
+        hostPath: 
+          path: /opt/apps/logs 
+          type: DirectoryOrCreate        
 ---
 
 apiVersion: v1
